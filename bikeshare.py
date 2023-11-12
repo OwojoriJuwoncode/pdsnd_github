@@ -101,7 +101,7 @@ def time_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
 
-
+# Updated comment to explain purpose of function
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -134,9 +134,10 @@ def trip_duration_stats(df):
     total_travel_time = df['Trip Duration'].sum()
     print('Total Travel Time:', total_travel_time // 86400, 'Days')
 
-    # Display mean travel time in minutes
-    mean_travel_time = df['Trip Duration'].mean()
-    print('Mean Travel Time:', mean_travel_time // 60, 'Minutes')
+   # Display mean travel time in minutes
+mean_travel_time = df['Trip Duration'].mean()
+print('Mean Travel Time:', mean_travel_time // 60, 'Minutes')  # Convert mean travel time to minutes
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
